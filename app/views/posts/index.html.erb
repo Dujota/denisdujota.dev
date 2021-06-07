@@ -1,5 +1,7 @@
 <h1>Blog index</h1>
 
+<%= link_to "Create new Blog Post", new_post_path %>
+
 <% @posts.each do |post| %>
   <h4><%= post.title %></h4>
   <%= post.body %>
