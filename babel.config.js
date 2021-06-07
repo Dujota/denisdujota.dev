@@ -1,3 +1,6 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable prefer-template */
+/* eslint-disable no-var */
 module.exports = function(api) {
   var validEnv = ['development', 'test', 'production']
   var currentEnv = api.env()
@@ -81,7 +84,14 @@ module.exports = function(api) {
         {
           removeImport: true
         }
+      ],
+      [
+        '@babel/plugin-proposal-private-methods',
+        {
+          loose: true
+        }
       ]
+
     ].filter(Boolean)
   }
 }
