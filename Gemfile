@@ -53,3 +53,5 @@ gem "rspec-rails", "~> 5.0", :groups => [:development, :test]
 gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
 
 gem "rufo", "~> 0.13.0", :groups => [:development, :test]
+
+gem "pry", "~> 0.14.1", :groups => [:development, :test]

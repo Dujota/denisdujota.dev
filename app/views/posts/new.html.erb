@@ -1,8 +1,14 @@
 <h1>Create a new Blog Post</h1>
 
 <%= form_with model: @post do |form| %>
- <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
- </div>
+    <p>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+    </p>
+
+     <p><%= form.submit %></p>
 <% end %>
