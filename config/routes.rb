@@ -5,4 +5,8 @@ Rails.application.routes.draw do
 
   # Pages
   get "contact", to: "pages#contact"
+
+  # Blog Posts
+  resources :posts do
+  end
 end
