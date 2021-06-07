@@ -2,12 +2,19 @@
 
 <%= link_to "Create new Blog Post", new_post_path %>
 
-<% @posts.each do |post| %>
-  <div>
-    <p>
-      <strong> <%= post.title %> </strong>
-      <%= link_to "Read More", post_path(post) %>
-    </p>
-  </div>
-<% end %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
 
+  <% @posts.each do |post| %>
+  <tr>
+    <td> <strong> <%= post.title %> </strong> </td>
+    <td> <%= post.body %> </td>
+    <td> <%= link_to "Read More", post_path(post) %> </td>
+    <td> <%= link_to "Edit", edit_post_path(post) %></td>
+  </tr>
+  <% end %>
+
+</table>
