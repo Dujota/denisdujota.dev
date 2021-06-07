@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :load_post, only: [:edit, :update, :show, :destory]
+
   def index
     @posts = Post.all
   end

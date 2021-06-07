@@ -3,8 +3,11 @@
 <%= link_to "Create new Blog Post", new_post_path %>
 
 <% @posts.each do |post| %>
-  <h4><%= post.title %></h4>
-  <%= post.body %>
-  <br>
+  <div>
+    <p>
+      <strong> <%= post.title %> </strong>
+      <%= link_to "Read More", post_path(post) %>
+    </p>
+  </div>
 <% end %>
 
