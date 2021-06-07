@@ -24,6 +24,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to post_path(@post), notice: "Post was successfully updated" }
+      else
+        flash[:notice] = "Unable to update Blog Post"
+      end
+    end
+  end
+
   private
 
   def post_params
