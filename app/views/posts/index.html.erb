@@ -14,6 +14,7 @@
     <td> <%= post.body %> </td>
     <td> <%= link_to "Read More", post_path(post) %> </td>
     <td> <%= link_to "Edit", edit_post_path(post) %></td>
+    <td><%= link_to "Delete", post_path(post), method: :delete, data:{ confirm: "Are you sure you want to delete this blog post?"} %></td>
   </tr>
   <% end %>
 

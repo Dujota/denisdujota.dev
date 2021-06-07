@@ -3,4 +3,6 @@
 <p><%= @post.body %></p>
 
 <%= link_to "Back", posts_path %>
+<br>
 <%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Delete", post_path, method: :delete, data:{ confirm: "Are you sure you want to delete this blog post?"} %>
