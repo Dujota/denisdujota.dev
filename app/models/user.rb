@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_and_belongs_to_many :roles
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   # USER AUTHORITY METHODS
   def role_names
