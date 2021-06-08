@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_and_belongs_to_many :roles
+
+  def admin?
+    self.roles.include?(Role.find_by_name("admin"))
+  end
 end
