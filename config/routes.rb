@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, skip: [:registrations]
+  devise_for :users, path: "admin",
+                     :path_names => {
+                       :sign_in => "signin",
+                       :sign_out => "signout",
+                     },
+                     only: [:sessions]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope :admin do
     resources :posts
