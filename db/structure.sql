@@ -34,7 +34,8 @@ CREATE TABLE public.posts (
     title character varying,
     body text,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    user_id bigint NOT NULL
 );
 
 
@@ -205,6 +206,13 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- Name: index_posts_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_posts_on_user_id ON public.posts USING btree (user_id);
+
+
+--
 -- Name: index_roles_users_on_role_id_and_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -233,6 +241,14 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING bt
 
 
 --
+-- Name: posts fk_rails_5b5ddfd518; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.posts
+    ADD CONSTRAINT fk_rails_5b5ddfd518 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -242,6 +258,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210607061118'),
 ('20210608182327'),
 ('20210608182604'),
-('20210608193236');
+('20210608193236'),
+('20210608213657');
 
 
