@@ -90,6 +90,16 @@ ALTER SEQUENCE public.roles_id_seq OWNED BY public.roles.id;
 
 
 --
+-- Name: roles_users; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.roles_users (
+    role_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -110,8 +120,7 @@ CREATE TABLE public.users (
     reset_password_sent_at timestamp without time zone,
     remember_created_at timestamp without time zone,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
-    role_id bigint NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL
 );
 
 
@@ -196,6 +205,20 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- Name: index_roles_users_on_role_id_and_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_roles_users_on_role_id_and_user_id ON public.roles_users USING btree (role_id, user_id);
+
+
+--
+-- Name: index_roles_users_on_user_id_and_role_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_roles_users_on_user_id_and_role_id ON public.roles_users USING btree (user_id, role_id);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -210,21 +233,6 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING bt
 
 
 --
--- Name: index_users_on_role_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_users_on_role_id ON public.users USING btree (role_id);
-
-
---
--- Name: users fk_rails_642f17018b; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT fk_rails_642f17018b FOREIGN KEY (role_id) REFERENCES public.roles(id);
-
-
---
 -- PostgreSQL database dump complete
 --
 
@@ -234,7 +242,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210607061118'),
 ('20210608182327'),
 ('20210608182604'),
-('20210608182629'),
-('20210608191342');
+('20210608193236');
 
 
