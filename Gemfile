@@ -57,3 +57,5 @@ gem "rufo", "~> 0.13.0", :groups => [:development, :test]
 gem "pry", "~> 0.14.1", :groups => [:development, :test]
 
 gem "devise", "~> 4.8"
+
+gem "cancancan", "~> 3.2"
