@@ -7,7 +7,7 @@
   </ul>
 <% end %>
 
-<%= form_with model: @post do |form| %>
+<%= form_with model: [:admin, @post] do |form| %>
     <p>
         <%= form.label :title %>
         <%= form.text_field :title %>

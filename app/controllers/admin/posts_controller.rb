@@ -7,6 +7,8 @@ class Admin::PostsController < Admin::BaseController
   def create
     # render plain: params[:post].inspect <--- to see params in the browser
     respond_to do |format|
+      @post.user = current_user if admin?
+
       if @post.save
         format.html { redirect_to post_path(@post), notice: "Post was successfully created" }
       else
