@@ -122,8 +122,6 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
-    pg (1.2.3-x64-mingw32)
-    pg (1.2.3-x86-mingw32)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -225,8 +223,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.1)
-      tzinfo (>= 1.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -276,7 +272,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.1p64
 
 BUNDLED WITH
-   2.1.4
+   2.2.15
