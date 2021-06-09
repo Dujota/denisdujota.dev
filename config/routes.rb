@@ -7,7 +7,8 @@ Rails.application.routes.draw do
                      only: [:sessions]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :admin do
-    resources :posts, except: %i[show]
+    root "base#dashboard"
+    resources :posts, except: %i[show index]
   end
 
   # Blog Posts

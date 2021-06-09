@@ -1,2 +1,6 @@
 <h1>Contact Page</h1>
+
 <%= link_to "Home", root_path %>
+<% if admin? %>
+  <%= link_to "Admin Dashboard", admin_root_path %>
+<% end %>
