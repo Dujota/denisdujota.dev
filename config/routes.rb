@@ -6,8 +6,8 @@ Rails.application.routes.draw do
                      },
                      only: [:sessions]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  scope :admin do
-    resources :posts
+  namespace :admin do
+    resources :posts, except: %i[show]
   end
 
   # Blog Posts
