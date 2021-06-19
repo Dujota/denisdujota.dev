@@ -9,15 +9,12 @@
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
   <body>
-    <%# DEVISE LINKS %>
-    <% if user_signed_in? %>
-      Signed in as <%= current_user.email %>. Not you?
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "sign in", new_user_session_path %>
-    <% end %>
+    <%# Navigation Links %>
+    <%= render  "shared/navbar" %>
     <%# Flash Messages %>
     <%= render 'shared/flash' %>
     <%= yield %>
+    <%# Footer %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
