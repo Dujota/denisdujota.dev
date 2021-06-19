@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>ResumeSite</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
-  <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
-</head>
-
-<body>
-  <%# DEVISE LINKS %>
-  <% if user_signed_in? %>
-  Signed in as <%= current_user.email %>. Not you?
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "sign in", new_user_session_path %>
-  <% end %>
-  <%# Flash Messages %>
-  <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, id: "flash_#{name}" %>
-  <% end %>
-
-  <%= yield %>
-</body>
-
+  <head>
+    <title>ResumeSite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
+    <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
+  </head>
+  <body>
+    <%# DEVISE LINKS %>
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not you?
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path %>
+    <% end %>
+    <%# Flash Messages %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+    <%= yield %>
+  </body>
 </html>
