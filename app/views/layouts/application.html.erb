@@ -17,9 +17,7 @@
       <%= link_to "sign in", new_user_session_path %>
     <% end %>
     <%# Flash Messages %>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+    <%= render 'shared/flash' %>
     <%= yield %>
   </body>
 </html>
