@@ -10,15 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
+//  Base -  These need to be imported in a certain order
+@import "base/colorswatches";
+@import "common/*";
+@import "common/layout/*";
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
+//  Rails Views
+@import "views/admin/*";
+@import "views/posts/*";
+@import "views/pages/*";

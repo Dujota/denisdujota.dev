@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .container {
   margin: 0;
   position: relative;
   overflow: hidden;
+  background-color: $main-bg-color;
 }
