@@ -7,14 +7,19 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
+    <%# Google Fonts - Roboto %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <%# Navigation Links %>
-    <%= render  "shared/navbar" %>
-    <%# Flash Messages %>
-    <%= render 'shared/flash' %>
-    <%= yield %>
-    <%# Footer %>
-    <%= render 'shared/footer' %>
+    <div class="container">
+      <%# Navigation Links %>
+      <%= render  "shared/navbar" %>
+      <%# Flash Messages %>
+      <%= render 'shared/flash' %>
+      <%= yield %>
+      <%# Footer %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
