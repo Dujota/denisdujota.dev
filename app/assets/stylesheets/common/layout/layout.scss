@@ -18,5 +18,9 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-color: $main-bg-color;
+  background-color: $main-bg;
+}
+
+.section {
+  border-bottom: 1px solid $section-hr;
 }
