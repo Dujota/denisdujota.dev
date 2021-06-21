@@ -14,9 +14,13 @@
  */
 
 //  Base -  These need to be imported in a certain order
+@import "base/reset";
 @import "base/colorswatches";
+@import "base/global";
+@import "base/typography";
 @import "common/*";
 @import "common/layout/*";
+
 
 //  Rails Views
 @import "views/admin/*";

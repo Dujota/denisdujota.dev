@@ -1,15 +1,35 @@
 #home-page {
+
+
   #spash-picture {
     height: 450px;
-    background-color: $text-teal;
+    background-color: $secondary;
   }
 
   #intro {
-    height: 385px
+    height: 385px;
+    @include flex(column, null, center);
+    text-align: center;
+
+    .intro-name {
+      line-height: 1.4;
+    }
+
+    .subtitles {
+      .subtitle {
+        border-right: 1px solid $secondary;
+        padding-right: 5px;
+
+        &:last-child {
+          padding-right: 0px;
+          border-right: none;
+        }
+      }
+    }
   }
 
   #about {
     height: 425px;
-    ;
+
   }
 }

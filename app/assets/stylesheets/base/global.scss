@@ -1,0 +1,62 @@
+// Global generic styles
+
+// FLEX
+$direction: row !default;
+$justify-content: flex-start !default;
+$align-items: stretch !default;
+
+@mixin flex($direction, $justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  align-items: $align-items;
+}
+
+// Positioning
+@mixin vertical-middle-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+
+$small-screen: 600px !default;
+$extra-small-screen: 360px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$extra-small-and-down: "only screen and (max-width : #{$extra-small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+
+
+// Classes to HIDE elements
+.display-none {
+  display: none !important;
+}
+
+.only-small {
+  display: none !important;
+
+  @media #{$small-and-down} {
+    display: initial !important;
+  }
+}
+
+.hide-small {
+  @media #{$small-and-down} {
+    display: none;
+  }
+}

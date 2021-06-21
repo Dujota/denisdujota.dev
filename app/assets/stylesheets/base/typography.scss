@@ -1,0 +1,22 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $text-white;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 26px;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin section-header-text {
+  color: $text-white;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 12px;
+}
