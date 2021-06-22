@@ -1,0 +1,28 @@
+.btn {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 62px;
+  color: $text-white;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+  background: 0 0;
+  outline: none;
+
+  border-radius: 64px;
+  border: 1px solid $nav-bar;
+
+
+  // sizing
+  padding: 0 35px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 64px;
+
+  &:hover {
+    color: $secondary;
+    border: 1px solid $secondary;
+  }
+}
