@@ -1,0 +1,9 @@
+#dev-skill-items {
+  @include flex(row, null, null);
+  @include flex-wrap(wrap);
+
+  .list-item {
+    width: 50%;
+    ;
+  }
+}
