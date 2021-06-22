@@ -81,5 +81,5 @@ Rails.application.configure do
   config.web_console.permissions = "127.0.0.1"
 
   # NGROK
-  config.hosts << "a507c5529294.ngrok.io"
+  config.hosts << "1f98814807d7.ngrok.io"
 end
