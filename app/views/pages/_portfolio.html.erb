@@ -1,0 +1,22 @@
+<%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
+<% portfolio = [
+    { name:"International Safety Systems", category:"Link", path:"#"},
+    { name:"Spire-Ruby", category:"Link", path:"#"},
+    { name:"MusicForever (DJ. Ollggie)", category:"Link", path:"#"},
+    { name:"WatsPoppin", category:"Link", path:"#"},
+    { name:"Neighbourly", category:"Link", path:"#"},
+    { name:"Aeya Studios", category:"Link", path:"#"},
+  ] %>
+<%# Portfolio %>
+<div id="portfolio-items">
+  <% portfolio.each do |proj| %>
+    <div class="list-item">
+      <%# portfolio link %>
+      <a class="portfolio-link" href="<%= proj[:path]%>" target="_blank" rel="noopener noreferrer">
+        <div class="item-image"></div>
+        <div class="item-category"><%= proj[:category] %> </div>
+        <div class="item-name"><span><%= proj[:name] %></span></div>
+      </a>
+    </div>
+  <% end %>
+</div>
