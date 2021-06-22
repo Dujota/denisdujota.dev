@@ -1,0 +1,4 @@
+#contact-page {
+  @include flex(column, center, null);
+  min-height: 100vh;
+}

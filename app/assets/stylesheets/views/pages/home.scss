@@ -39,11 +39,6 @@
 
   #contact {
     .contact-info {
-      // @include flex(column, null, center);
-      min-height: 400px;
-      border-radius: 30px;
-      border: 1px solid $nav-bar;
-
       .contact-info-heading {
         text-align: center;
       }

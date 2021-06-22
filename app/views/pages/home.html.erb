@@ -60,10 +60,12 @@
     <%= render('portfolio') %>
   </section>
   <%# Contact %>
-  <section class="section" id="contact">
+  <section class="section " id="contact">
     <div class="title">Contact Me</div>
     <div class="subtitle">Let's Talk</div>
     <%# render('contact_form')   TODO: ADD CONTACT FORM %>
-    <%= render'contact_info', display_name: true %>
+    <div class="card-round-outline">
+      <%= render'contact_info', display_name: true %>
+    </div>
   </section>
 </div>
