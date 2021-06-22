@@ -1,0 +1,21 @@
+<%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
+<% resume = [
+    {date:'2019-Present', name:"General Assembly", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque."},
+    {date:'2018-Present', name:"International Safety Systems", text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'},
+    {date:'2018-2019', name:'University of Toronto  School of Continuing Studies', text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'},
+    {date:'2017', name:'Bayshore HealthCare', text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'},
+    {date:'2012-2017', name:'Automotive Resources International', text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'},
+    {date: '2005-2012', name:'Wells Fargo Financial', text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'}
+  ] %>
+<%# Resume Items %>
+<div id="resume-items">
+  <% resume.each do |job| %>
+    <div class="resume-item">
+      <div class="item-date"><span><%= job[:date] %></span></div>
+      <div class="item-name"><span><%= job[:name] %></span></div>
+      <div class="item-text">
+        <p><%= job[:text] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

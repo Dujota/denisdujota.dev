@@ -1,0 +1,18 @@
+.list-item {
+  .item-date {
+    color: $secondary;
+    font-weight: 600;
+    font-size: 11px;
+  }
+
+  .item-name {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .item-text {
+    p {
+      line-height: 1.8;
+    }
+  }
+}

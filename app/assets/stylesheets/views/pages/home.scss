@@ -1,13 +1,12 @@
 #home-page {
 
-
   #spash-picture {
     height: 450px;
     background-color: $secondary;
   }
 
   #intro {
-    height: 385px;
+    // height: 385px;
     @include flex(column, null, center);
     text-align: center;
 
@@ -28,8 +27,6 @@
     }
   }
 
-  #about {
-    height: 425px;
+  #about {}
 
-  }
 }

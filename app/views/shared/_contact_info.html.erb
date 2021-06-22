@@ -1,0 +1,21 @@
+<%# TODO: REFACTOR TO BACKEBD INSTANCE VARIABLE %>
+<% contact_info_array = [['residence','Canada'], ['freelance','Available'], ['address','Toronto, ON'], ['phone','+1 416 827 0213'], ['email','DenisDujota@gmail.com'], ['linkedin','https://www.linkedin.com/in/dujota/']]%>
+<div id="contact-info">
+  <div class="contact-details-list">
+    <ul>
+      <% contact_info_array.each do |contact, value| %>
+        <li>
+          <strong><span class="subtitle"><%= contact.capitalize() %>:</span><span>
+              <% if contact == 'linkedin' %>
+                <a href="<%= value.capitalize() %>">LinkedIn Logo DenisDujota</a></span>
+            <% else %>
+              <%= value.capitalize() %>
+            </span>
+          <% end %>
+        </strong>
+      </li>
+      <%=  %>
+    <% end %>
+  </ul>
+</div>
+</div>
