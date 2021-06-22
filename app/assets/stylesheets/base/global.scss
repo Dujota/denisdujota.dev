@@ -1,16 +1,6 @@
 // Global generic styles
 
-// FLEX
-$direction: row !default;
-$justify-content: flex-start !default;
-$align-items: stretch !default;
 
-@mixin flex($direction, $justify-content, $align-items) {
-  display: flex;
-  justify-content: $justify-content;
-  flex-direction: $direction;
-  align-items: $align-items;
-}
 
 // Positioning
 @mixin vertical-middle-align {
