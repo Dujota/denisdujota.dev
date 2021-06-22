@@ -53,5 +53,8 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 }
 
 p {
+  font-size: 14px;
+  padding: 0;
   margin: 20px 0;
+
 }

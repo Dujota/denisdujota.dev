@@ -29,8 +29,10 @@
     }
 
     .intro-name {
+      @include section-header-text;
       font-size: 40px;
       line-height: 1.4;
+      text-align: center;
 
 
       width: auto;
@@ -51,7 +53,12 @@
     }
 
     .subtitles {
-      margin-bottom: 30px;
+      @include subtitle-base;
+      margin-bottom: 10px;
+
+      @media #{$medium-only} {
+        margin-bottom: 30px;
+      }
 
       .subtitle {
         border-right: 1px solid $secondary;
@@ -66,6 +73,10 @@
 
     .intro-text {
       margin-top: 0px;
+
+      @media #{$medium-only} {
+        margin: 0 0 30px;
+      }
     }
   }
 

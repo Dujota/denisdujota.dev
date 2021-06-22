@@ -37,16 +37,17 @@ body *::before {
   border-bottom: 1px solid $nav-bar;
   padding: 50px 30px;
 
-  .title {
-    text-align: center;
-    @include section-header-text;
+  .titles {
+    margin: 0 0 60px;
+
+    .title {
+      text-align: center;
+      @include section-header-text;
+    }
+
+    .subtitle {
+      @include subtitle-base
+    }
   }
 
-  .subtitle {
-    text-align: center;
-    color: $secondary;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
 }

@@ -1,72 +1,92 @@
 <div id="home-page">
-  <%# Splash Screen %>
-  <section id="spash-picture"></section>
-  <%# Intro %>
-  <section class="section" id="intro">
-    <h1 class="intro-name title">
-      <span>
-        Denis
-        <br>
-        Dujota
-      </span>
-    </h1>
-    <div class="subtitles">
-      <span class="subtitle">Software Developer</span>
-      <span class="subtitle">Mentor</span>
-      <span class="subtitle">Consultant</span>
-      <span class="subtitle">Web Designer</span>
-    </div>
-    <p class="intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod ab iusto sint magni deleniti, harum esse corporis distinctio, officia odio necessitatibus sunt porro adipisci.</p>
-    <a href="#contact" class="btn btn-contact">Contact Me</a>
-  </section>
-  <%# About Me %>
-  <section class="section" id="about">
-    <div class="title">About Me</div>
-    <div class="subtitle">my story</div>
-    <div class="about-me-text">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus ele</p>
-    </div>
-    <%= render('contact_info', display_name: false) %>
-  </section>
-  <%# Experience %>
-  <section class="section" id="experience">
-    <div class="title">Experience</div>
-    <div class="subtitle">what i have done</div>
-    <%# Resume lists %>
-    <%= render('experience') %>
-  </section>
-  <%# Skills - programming %>
-  <section class="section" id="skills">
-    <div class="title">Dev. Skills</div>
-    <div class="subtitle">programming with</div>
-    <%= render('dev_skills') %>
-  </section>
-  <%# Spoken Languages %>
-  <section class="section" id="languages">
-    <div class="title">Spoken Languages</div>
-    <div class="subtitle">reading and writing</div>
-    <%= render('spoken_languages') %>
-  </section>
-  <%# Education %>
-  <section class="section" id="education">
-    <div class="title">Education</div>
-    <div class="subtitle">Studied At</div>
-    <%= render('education') %>
-  </section>
-  <%# Portfolio %>
-  <section class="section" id="portfolio">
-    <div class="title">Portfolio</div>
-    <div class="subtitle">Latest Work</div>
-    <%= render('portfolio') %>
-  </section>
-  <%# Contact %>
-  <section class="section " id="contact">
-    <div class="title">Contact Me</div>
-    <div class="subtitle">Let's Talk</div>
-    <%# render('contact_form')   TODO: ADD CONTACT FORM %>
-    <div class="card-round-outline">
-      <%= render'contact_info', display_name: true %>
-    </div>
-  </section>
+    <%# Splash Screen %>
+    <section id="spash-picture"></section>
+    <%# Intro %>
+    <section class="section" id="intro">
+        <h1 class="intro-name intro-title">
+            <span>
+                Denis
+                <br>
+                Dujota
+            </span>
+        </h1>
+        <div class="subtitles">
+            <span class="subtitle">Software Developer</span>
+            <span class="subtitle">Mentor</span>
+            <span class="subtitle">Consultant</span>
+            <span class="subtitle">Web Designer</span>
+        </div>
+        <p class="intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod ab iusto sint magni deleniti, harum esse corporis distinctio, officia odio necessitatibus sunt porro adipisci.</p>
+        <a href="#contact" class="btn btn-contact">Contact Me</a>
+    </section>
+    <%# About Me %>
+    <section class="section" id="about">
+        <div class="titles">
+            <div class="title">About Me</div>
+            <div class="subtitle">my story</div>
+        </div>
+
+        <div class="about-me-text">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus ele</p>
+        </div>
+        <%= render('contact_info', display_name: false) %>
+    </section>
+    <%# Experience %>
+    <section class="section" id="experience">
+        <div class="titles">
+            <div class="title">Experience</div>
+            <div class="subtitle">what i have done</div>
+        </div>
+        <%# Resume lists %>
+        <%= render('experience') %>
+    </section>
+    <%# Skills - programming %>
+    <section class="section" id="skills">
+        <div class="titles">
+            <div class="title">Dev. Skills</div>
+            <div class="subtitle">programming with
+            </div>
+        </div>
+        <%= render('dev_skills') %>
+    </section>
+    <%# Spoken Languages %>
+    <section class="section" id="languages">
+        <div class="titles">
+            <div class="title">Spoken Languages</div>
+            <div class="subtitle">reading and writing
+            </div>
+        </div>
+        <%= render('spoken_languages') %>
+    </section>
+    <%# Education %>
+    <section class="section" id="education">
+        <div class="titles">
+            <div class="title">Education</div>
+            <div class="subtitle">Studied At
+            </div>
+        </div>
+        <%= render('education') %>
+    </section>
+    <%# Portfolio %>
+    <section class="section" id="portfolio">
+        <div class="titles">
+            <div class="title">Portfolio</div>
+            <div class="subtitle">Latest Work
+            </div>
+        </div>
+        <%= render('portfolio') %>
+    </section>
+    <%# Contact %>
+    <section class="section " id="contact">
+        <div class="titles">
+            <div class="title">Contact Me</div>
+            <div class="subtitle">Let's Talk
+            </div>
+        </div>
+        <%# render('contact_form')   TODO: ADD CONTACT FORM %>
+        <div class="card-round-outline">
+            <%= render'contact_info', display_name: true %>
+        </div>
+    </section>
 </div>

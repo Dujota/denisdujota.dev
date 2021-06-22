@@ -17,3 +17,11 @@ body {
   font-size: 34px;
   line-height: 1.2;
 }
+
+@mixin subtitle-base {
+  text-align: center;
+  color: $secondary;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
