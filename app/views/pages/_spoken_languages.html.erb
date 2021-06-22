@@ -1,0 +1,18 @@
+<%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
+<% languages = [
+    { name:"English", text:"Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."},
+    { name:"Spanish", text:"Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."},
+    { name:"Russian", text:"Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."},
+
+  ] %>
+<%# Dev Skills Items %>
+<div id="dev-skill-items">
+  <% languages.each do |lang| %>
+    <div class="list-item">
+      <div class="item-name"><span><%= lang[:name] %></span></div>
+      <div class="item-text">
+        <p><%= lang[:text] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
