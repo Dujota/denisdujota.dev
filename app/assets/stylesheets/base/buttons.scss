@@ -13,13 +13,12 @@
   border-radius: 64px;
   border: 1px solid $nav-bar;
 
-
   // sizing
+  height: 64px;
   padding: 0 35px;
   overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 64px;
+
+  @include flex(row, center, center);
 
   &:hover {
     color: $secondary;
