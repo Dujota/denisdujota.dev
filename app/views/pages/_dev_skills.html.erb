@@ -1,0 +1,27 @@
+<%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
+<% dev_skills = [
+    { name:"Ruby on Rails, PSQL", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Full-stack Javascript", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"React", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"API Design (REST/GraphQL)", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Automated testing", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Object Oriented Design", text:"(Ruby, Python) Lorem ipsum dolor sit amet, conse."},
+    { name:"Cloud Services", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Realtime Apps", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Mobile Apps", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Django, PSQL", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"HTML, CSS", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Python", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+    { name:"Wordpress", text:"Etiam sit amet orci eget eros faucibus tincidunt."},
+  ] %>
+<%# Dev Skills Items %>
+<div id="dev-skill-items">
+  <% dev_skills.each do |skill| %>
+    <div class="list-item">
+      <div class="item-name"><span><%= skill[:name] %></span></div>
+      <div class="item-text">
+        <p><%= skill[:text] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
