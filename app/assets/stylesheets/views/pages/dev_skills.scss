@@ -1,9 +1,8 @@
 #dev-skill-items {
-  @include flex(row, null, null);
+  @include flex(row, space-between, null);
   @include flex-wrap(wrap);
 
   .list-item {
-    width: 50%;
-    ;
+    width: 45%;
   }
 }
