@@ -9,12 +9,26 @@
     // height: 385px;
     @include flex(column, null, center);
     text-align: center;
+    padding: 0px 50px 50px 50px;
 
     .intro-name {
+      font-size: 40px;
       line-height: 1.4;
+      word-break: break-word;
+      word-wrap: break-word;
+
+      width: auto;
+      margin-top: -150px;
+      margin-bottom: -55px;
+      padding: 70px 90px;
+      border-radius: 360px 360px 0 0;
+
+      background-color: $primary;
     }
 
     .subtitles {
+      margin-bottom: 30px;
+
       .subtitle {
         border-right: 1px solid $secondary;
         padding-right: 5px;
@@ -24,6 +38,10 @@
           border-right: none;
         }
       }
+    }
+
+    .intro-text {
+      margin-top: 0px;
     }
   }
 
