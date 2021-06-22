@@ -1,17 +1,27 @@
 <nav id="navbar">
-  <%# DEVISE LINKS %>
-  <%= link_to "Home", root_path %>
-  <%# Admin Dashboard Link %>
-  <% if admin? %>
-    <%= link_to  "Admin Dashboard", admin_root_path %>
-  <% end %>
-  <%# Regular user navigation %>
-  <%= link_to "Posts", posts_path %>
-  <%= link_to "Contact", contact_path %>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "sign in", new_user_session_path %>
-  <% end %>
+  <%= link_to "Home", root_path, class: 'nav-bar-logo'%>
+  <ul class='nav-links'>
+    <%# DEVISE LINKS %>
+    <%# Admin Dashboard Link %>
+    <% if admin? %>
+      <li class='nav-link'> <%= link_to  "Admin Dashboard", admin_root_path %></li>
+    <% end %>
+    <%# Regular user navigation %>
+    <li class='nav-link'>
+      <%= link_to "Posts", posts_path %>
+    </li>
+    <li class='nav-link'>
+      <%= link_to "Contact", contact_path %>
+    </li>
+    <% if user_signed_in? %>
+      <li class='nav-link'>
+        Signed in as <%= current_user.email %>. Not you?
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li class='nav-link'>
+        <%= link_to "sign in", new_user_session_path %>
+      </li>
+    <% end %>
+  </ul>
 </nav>

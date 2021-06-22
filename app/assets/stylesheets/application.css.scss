@@ -19,6 +19,10 @@
 @import "base/global";
 @import "base/typography";
 @import "base/flexbox";
+@import 'base/links';
+@import 'base/forms';
+
+// Common
 @import "common/*";
 @import "common/layout/*";
 @import "common/lists/*";

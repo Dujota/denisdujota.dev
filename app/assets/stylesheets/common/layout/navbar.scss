@@ -1,5 +1,29 @@
 #navbar {
-  position: fixed;
-  background-color: $nav-bar;
+  height: 80px;
   width: 100%;
+  padding: 0 30px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+
+  background-color: $nav-bar;
+  z-index: 999;
+
+  @include flex(row, flex-end, center);
+
+  a {
+    display: block;
+    margin: 0 5px;
+  }
+
+  .nav-bar-logo {
+    @include flex-grow(2)
+  }
+
+  ul {
+    @include flex(row, flex-end, center);
+  }
 }
