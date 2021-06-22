@@ -1,4 +1,9 @@
 #home-page {
+  .section {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 
   #spash-picture {
     height: 450px;
@@ -61,4 +66,5 @@
       }
     }
   }
+
 }

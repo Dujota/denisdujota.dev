@@ -6,3 +6,36 @@ a {
     color: $secondary;
   }
 }
+
+.icon-link {
+  position: relative;
+  display: inline-block;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 0;
+
+
+  font-size: 14px;
+  line-height: 54px;
+  color: $text-white;
+  text-align: center;
+
+  background: $primary;
+  border: 1px solid $nav-bar;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.footer-icon-link {
+  border-radius: 54px;
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+}
