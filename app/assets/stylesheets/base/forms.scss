@@ -1,0 +1,50 @@
+// Mixin for modifying the placeholder text on inputs to customize our UI
+@mixin placeholder-color($color, $weight, $alignment) {
+  &.placeholder {
+    color: $color;
+    font-weight: $weight;
+    text-align: $alignment;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+    text-align: $alignment;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+    text-align: $alignment;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+    text-align: $alignment;
+  }
+}
+
+.form-section {}
+
+.resource-form {
+  .section-header {}
+
+  label {}
+
+  .sub-label {}
+}
+
+.field-group {
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="datetime-local"],
+  textarea {}
+}
+
+.uppercase-field {
+  text-transform: uppercase;
+}

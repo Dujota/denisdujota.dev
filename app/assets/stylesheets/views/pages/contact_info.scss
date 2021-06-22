@@ -1,0 +1,31 @@
+.contact-info {
+  padding: 30px;
+
+
+  .contact-info-heading {
+    .contact-name {
+      margin-bottom: 5px;
+      font-size: 24px;
+      text-transform: capitalize;
+    }
+
+    .contact-title {
+      text-transform: uppercase;
+    }
+  }
+
+  .contact-details-list {
+    margin: 35px 0;
+
+    ul {
+      li {
+        font-weight: 600;
+        margin-bottom: 6px;
+
+        strong {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
