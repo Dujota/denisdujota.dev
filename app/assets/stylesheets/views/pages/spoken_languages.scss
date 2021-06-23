@@ -1,0 +1,9 @@
+#languages {
+  #language-items {
+    @include flex(row, space-between, null);
+
+    .list-item {
+      width: 47%;
+    }
+  }
+}
