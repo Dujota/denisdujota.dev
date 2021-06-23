@@ -12,6 +12,7 @@ body {
 }
 
 @mixin section-header-text {
+  transition: all .3s ease 0s;
   color: $text-white;
   font-weight: 800;
   font-size: 34px;

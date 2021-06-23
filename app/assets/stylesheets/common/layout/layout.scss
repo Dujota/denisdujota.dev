@@ -41,13 +41,28 @@ body *::before {
     margin: 0 0 60px;
 
     .title {
-      text-align: center;
       @include section-header-text;
+      text-align: center;
+
+      @media #{$medium-only} {
+        text-align: unset;
+        margin: 0 0 10px;
+        max-width: 70%;
+        font-size: 55px;
+        line-height: 1.2;
+      }
     }
 
     .subtitle {
-      @include subtitle-base
+      @include subtitle-base;
+
+      @media #{$medium-only} {
+        text-align: unset;
+      }
     }
   }
 
+  .subtitle {
+    @include subtitle-base;
+  }
 }
