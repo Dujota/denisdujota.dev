@@ -36,6 +36,7 @@ body *::before {
 .section {
   border-bottom: 1px solid $nav-bar;
   padding: 50px 30px;
+  transition: all .3s ease 0s;
 
   .titles {
     margin: 0 0 60px;
