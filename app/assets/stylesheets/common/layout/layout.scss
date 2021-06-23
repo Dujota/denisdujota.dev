@@ -47,6 +47,10 @@ body *::before {
   padding: 50px 30px;
   transition: all .3s ease 0s;
 
+  @media #{$large-and-up} {
+    margin-right: 25px;
+  }
+
   .titles {
     margin: 0 0 60px;
 

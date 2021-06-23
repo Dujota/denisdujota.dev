@@ -15,6 +15,10 @@ p {
   font-size: 14px;
   padding: 0;
   margin: 20px 0;
+
+  @media #{$large-and-up} {
+    padding: 0 5px;
+  }
 }
 
 @mixin section-header-text {
