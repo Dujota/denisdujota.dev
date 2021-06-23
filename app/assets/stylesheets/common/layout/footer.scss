@@ -11,6 +11,19 @@
 
   z-index: 99;
 
+  @media #{$large-and-up} {
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+
+    width: 92px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    background-color: $primary;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -21,6 +34,10 @@
     left: 0;
     width: 100%;
     height: 1px;
+
+    @media #{$large-and-up} {
+      display: none;
+    }
   }
 
 
@@ -34,13 +51,21 @@
       text-align: center;
       font-size: 1;
 
+      @media #{$large-and-up} {
+        position: absolute;
+        bottom: 2rem;
+
+      }
     }
   }
-
-
 }
 
 .footer-cp-text {
   font-size: 10px;
   margin-left: 7px;
+
+  @media #{$large-and-up} {
+    bottom: 1px;
+    position: absolute;
+  }
 }

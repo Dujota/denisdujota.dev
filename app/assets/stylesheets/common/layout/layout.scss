@@ -10,6 +10,8 @@ body {
   padding: 0px;
   margin: 0px;
   width: 100%;
+
+  background-color: $primary;
 }
 
 body::after,
@@ -31,12 +33,23 @@ body *::before {
   position: relative;
   overflow: hidden;
   background-color: $primary;
+
+  @media #{$large-and-up} {
+    // add the layout spacing for the full screen version
+    position: relative;
+    margin: 50px 92px 0 24%;
+    width: 70%;
+  }
 }
 
 .section {
   border-bottom: 1px solid $nav-bar;
   padding: 50px 30px;
   transition: all .3s ease 0s;
+
+  @media #{$large-and-up} {
+    border-right: 1px solid $nav-bar;
+  }
 
   .titles {
     margin: 0 0 60px;
