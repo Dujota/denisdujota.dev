@@ -28,6 +28,15 @@
 
 
 .list-item {
+  @media #{$large-and-up} {
+    margin-bottom: 15px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 0px;
+    }
+  }
+
   .item-header {
 
     .item-date,
@@ -37,6 +46,10 @@
 
     .item-name {
       @include item-name-base;
+
+      @media #{$large-and-up} {
+        margin: 0 0 10px 30px !important;
+      }
     }
   }
 
