@@ -11,7 +11,7 @@
       height: 450px;
       background-color: $secondary;
 
-      @media #{$medium-only} {
+      @media #{$medium-and-up} {
         width: 100%;
         height: 70vh;
       }
@@ -32,7 +32,7 @@
       text-align: center;
       padding: 0px 50px 50px 50px;
 
-      @media #{$medium-only} {
+      @media #{$medium-and-up} {
         width: 100%;
         height: auto;
         padding-bottom: 70px;
@@ -58,7 +58,7 @@
 
         background-color: $primary;
 
-        @media #{$medium-only} {
+        @media #{$medium-and-up} {
           margin: 0 auto;
           margin-top: -200px;
           padding: 70px 35px 30px;
@@ -71,7 +71,7 @@
         @include subtitle-base;
         margin-bottom: 10px;
 
-        @media #{$medium-only} {
+        @media #{$medium-and-up} {
           margin-bottom: 30px;
         }
 
@@ -89,7 +89,7 @@
       .intro-text {
         margin-top: 0px;
 
-        @media #{$medium-only} {
+        @media #{$medium-and-up} {
           margin: 0 0 30px;
         }
       }
@@ -100,13 +100,13 @@
         padding: 0;
 
         ul {
-          @media #{$medium-only} {
+          @media #{$medium-and-up} {
             @include flex(row, space-between, start);
             @include flex-wrap(wrap)
           }
 
           li {
-            @media #{$medium-only} {
+            @media #{$medium-and-up} {
               margin: 0 0 6px;
               // padding: 0 20px;
               width: 47%;
@@ -115,7 +115,7 @@
             }
 
             strong {
-              @media #{$medium-only} {
+              @media #{$medium-and-up} {
                 width: 90px;
                 font-weight: 600;
               }

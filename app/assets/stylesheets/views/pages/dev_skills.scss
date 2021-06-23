@@ -7,7 +7,7 @@
 
     padding: 10px 0;
 
-    @media #{$medium-only} {
+    @media #{$medium-and-up} {
       width: 30%;
       padding: 10px;
     }

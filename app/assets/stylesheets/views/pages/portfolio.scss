@@ -1,7 +1,7 @@
 #portfolio-items {
   text-align: center;
 
-  @media #{$medium-only} {
+  @media #{$medium-and-up} {
     @include flex(row, space-between, null);
     @include flex-wrap(wrap)
   }
@@ -9,7 +9,7 @@
   .list-item {
     margin-bottom: 50px;
 
-    @media #{$medium-only} {
+    @media #{$medium-and-up} {
       width: 47%;
     }
 
@@ -28,7 +28,7 @@
         height: 425px;
         background-color: tan;
 
-        @media #{$medium-only} {
+        @media #{$medium-and-up} {
           height: auto;
 
           // force the even box shape

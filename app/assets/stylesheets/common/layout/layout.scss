@@ -54,7 +54,7 @@ body *::before {
       @include section-header-text;
       text-align: center;
 
-      @media #{$medium-only} {
+      @media #{$medium-and-up} {
         text-align: unset;
         margin: 0 0 10px;
         max-width: 70%;
@@ -66,7 +66,7 @@ body *::before {
     .subtitle {
       @include subtitle-base;
 
-      @media #{$medium-only} {
+      @media #{$medium-and-up} {
         text-align: unset;
       }
     }

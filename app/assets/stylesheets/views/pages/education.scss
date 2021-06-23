@@ -1,5 +1,5 @@
 #education-items {
-  @media #{$medium-only} {
+  @media #{$medium-and-up} {
     @include flex(row, space-between, null);
     @include flex-wrap(wrap);
 
