@@ -1,8 +1,17 @@
 #portfolio-items {
   text-align: center;
 
+  @media #{$medium-only} {
+    @include flex(row, space-between, null);
+    @include flex-wrap(wrap)
+  }
+
   .list-item {
     margin-bottom: 50px;
+
+    @media #{$medium-only} {
+      width: 47%;
+    }
 
     &:last-child {
       margin-bottom: 0px;
@@ -14,11 +23,21 @@
       outline: none;
       text-decoration: none;
 
-
       .item-image {
         width: 100%;
         height: 425px;
         background-color: tan;
+
+        @media #{$medium-only} {
+          height: auto;
+
+          // force the even box shape
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+        }
 
         &:hover {
           background-color: $secondary;
