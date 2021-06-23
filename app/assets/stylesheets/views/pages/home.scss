@@ -84,6 +84,30 @@
     .contact-info {
       padding: 0;
 
+      ul {
+        @media #{$medium-only} {
+          @include flex(row, space-between, start);
+          @include flex-wrap(wrap)
+        }
+
+        li {
+          @media #{$medium-only} {
+            margin: 0 0 6px;
+            // padding: 0 20px;
+            width: 47%;
+            font-size: 14px;
+            display: inline-block;
+          }
+
+          strong {
+            @media #{$medium-only} {
+              width: 90px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
       .contact-details-list {
         margin-bottom: 0;
       }

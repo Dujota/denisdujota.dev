@@ -1,15 +1,34 @@
-.list-item {
+@mixin date-category-base {
+  color: $secondary;
+  font-weight: 600;
+  font-size: 11px;
+}
 
-  .item-date,
+@mixin item-name-base {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.list-item {
+  .item-header {
+
+    .item-date,
+    .item-category {
+      @include date-category-base;
+    }
+
+    .item-name {
+      @include item-name-base;
+    }
+  }
+
+  item-date,
   .item-category {
-    color: $secondary;
-    font-weight: 600;
-    font-size: 11px;
+    @include date-category-base;
   }
 
   .item-name {
-    font-size: 18px;
-    font-weight: 800;
+    @include item-name-base;
   }
 
   .item-text {

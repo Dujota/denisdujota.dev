@@ -1,0 +1,10 @@
+#resume-items {
+  @media #{$medium-only} {
+    @include flex(row, space-between, null);
+    @include flex-wrap(wrap);
+
+    .list-item {
+      width: 47%;
+    }
+  }
+}
