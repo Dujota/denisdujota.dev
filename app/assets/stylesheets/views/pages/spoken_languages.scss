@@ -1,9 +1,13 @@
 #languages {
   #language-items {
-    @include flex(row, space-between, null);
+    @media #{$medium-and-up} {
+      @include flex(row, space-between, null);
 
-    .list-item {
-      width: 47%;
+      .list-item {
+        width: 47%;
+        padding: 0 5px;
+      }
     }
+
   }
 }
