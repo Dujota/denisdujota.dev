@@ -5,8 +5,6 @@
       &:last-child {
         border-bottom: none;
       }
-
-      @media #{$large-and-up} {}
     }
 
     #spash-picture {
@@ -138,6 +136,5 @@
         }
       }
     }
-
   }
 }
