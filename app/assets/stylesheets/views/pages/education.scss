@@ -1,4 +1,4 @@
-#resume-items {
+#education-items {
   @media #{$medium-only} {
     @include flex(row, space-between, null);
     @include flex-wrap(wrap);
