@@ -51,6 +51,13 @@ body *::before {
     margin-right: 25px;
   }
 
+  @media #{$large-and-up} {
+    margin-left: 25px;
+    margin-left: 30%;
+  }
+
+
+
   .titles {
     margin: 0 0 60px;
 

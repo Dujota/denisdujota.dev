@@ -24,6 +24,10 @@
         left: 0;
         height: 100%;
       }
+
+      @media #{$fullscreen-and-up} {
+        width: 45%;
+      }
     }
 
     #intro {
@@ -39,12 +43,17 @@
         height: auto;
         padding-bottom: 70px;
         margin: 0;
-
-
       }
 
       @media #{$large-and-up} {
         text-align: left;
+        height: 740px;
+      }
+
+
+      @media #{$fullscreen-and-up} {
+        width: 70%;
+        margin-left: 30%;
       }
 
       .intro-name {
@@ -72,7 +81,7 @@
 
         @media #{$large-and-up} {
           width: auto;
-          margin: 200px 0 0 -37vw;
+          margin: 250px 0 0 -37vw;
           padding: 4.2vw;
           font-size: 4.2vw;
           line-height: 1.4;
@@ -83,6 +92,10 @@
           span {
             margin-right: 300px;
           }
+        }
+
+        @media #{$fullscreen-and-up} {
+          margin: 125px 0 0 -26vw;
         }
       }
 
@@ -134,7 +147,7 @@
           li {
             @media #{$medium-and-up} {
               margin: 0 0 6px;
-              // padding: 0 20px;
+
               width: 47%;
               font-size: 14px;
               display: inline-block;
