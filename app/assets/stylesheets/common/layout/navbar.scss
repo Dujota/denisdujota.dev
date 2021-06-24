@@ -12,18 +12,55 @@
   background-color: $nav-bar;
   z-index: 999;
 
+  @media #{$large-and-up} {
+    width: calc(100% - 90px);
+
+    position: fixed;
+    left: 50px;
+    right: 50px;
+    top: 40px;
+
+    padding-left: 20px;
+    border-radius: 80px;
+
+    justify-content: space-between;
+  }
+
   @include flex(row, flex-end, center);
 
   a {
     display: block;
     margin: 0 5px;
+    line-height: 1.2;
+    font-weight: 800;
   }
 
+
   .nav-bar-logo {
-    @include flex-grow(2)
+    width: 200px;
+    height: 80px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+
+    @media #{$large-and-up} {
+      max-width: 160px;
+    }
   }
 
   ul {
     @include flex(row, flex-end, center);
+
+    .nav-link {
+      a {
+        @media #{$large-and-up} {
+          margin-left: 25px;
+        }
+      }
+    }
   }
+
+
 }
