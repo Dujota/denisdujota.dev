@@ -18,9 +18,14 @@
     margin: 35px 0;
 
     ul {
+      @include flex(column, null, center);
+
       li {
         font-weight: 600;
         margin-bottom: 6px;
+        text-align: left;
+
+        width: 300px;
 
         strong {
           margin-right: 8px;

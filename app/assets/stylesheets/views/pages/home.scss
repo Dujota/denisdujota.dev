@@ -1,5 +1,4 @@
 .container {
-
   #home-page {
     .section {
       &:last-child {
@@ -48,6 +47,10 @@
       @media #{$large-and-up} {
         text-align: left;
         height: 740px;
+
+        .btn.btn-contact {
+          align-self: flex-start;
+        }
       }
 
 
@@ -106,6 +109,9 @@
 
           @media #{$medium-and-up} {
             margin-bottom: 30px;
+          }
+
+          @media #{$large-and-up} {
             text-align: left;
           }
 
@@ -125,12 +131,9 @@
 
           @media #{$medium-and-up} {
             margin: 0 0 30px;
+
           }
         }
-      }
-
-      .btn.btn-contact {
-        align-self: flex-start;
       }
     }
 

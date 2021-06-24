@@ -31,9 +31,11 @@ body *::before {
   margin: 0;
   width: 100%;
   position: relative;
-  // overflow: hidden;
-  background-color: $primary;
 
+  background-color: $primary;
+}
+
+.container-home-page {
   @media #{$large-and-up} {
     // add the layout spacing for the full screen version
     position: relative;
@@ -43,20 +45,10 @@ body *::before {
 }
 
 .section {
-  border-bottom: 1px solid $nav-bar;
-  padding: 50px 30px;
   transition: all .3s ease 0s;
 
-  @media #{$large-and-up} {
-    margin-right: 25px;
-  }
-
-  @media #{$large-and-up} {
-    margin-left: 25px;
-    margin-left: 30%;
-  }
-
-
+  margin-top: 50px;
+  padding: 50px 30px;
 
   .titles {
     margin: 0 0 60px;
@@ -85,5 +77,29 @@ body *::before {
 
   .subtitle {
     @include subtitle-base;
+  }
+}
+
+.section-home-page {
+  margin: 0;
+  border-bottom: 1px solid $nav-bar;
+
+  @media #{$large-and-up} {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  @media #{$fullscreen-and-up} {
+    margin-left: 30%;
+  }
+}
+
+.section-posts {
+  @include flex(column, null, null);
+  // height: calc(100vh - 50px);
+
+  table {
+    align-self: center;
+    // flex-grow: 1;
   }
 }

@@ -1,14 +1,22 @@
-<section class="section">
-  <h1 class="intro-name title">Blog index</h1>
-  <% if admin? %>
-    <%= link_to "Create new Blog Post", new_admin_post_path %>
-  <% end %>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
-    <%# Post partial render %>
-    <%= render partial: "post", collection: @posts %>
-  </table>
+<section class="section section-posts">
+
+    <div class="titles">
+        <h1 class="intro-name title">Blog index</h1>
+        <div class="subtitle">all the most current tips and tutorials plus some random news</div>
+    </div>
+
+    <table>
+        <tr class="table-headings">
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        <%# Post partial render %>
+        <%= render partial: "post", collection: @posts %>
+    </table>
+
+    <% if admin? %>
+    <div class="action-links">
+        <%= link_to "Create new Blog Post", new_admin_post_path %>
+    </div>
+    <% end %>
 </section>

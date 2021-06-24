@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  text-align: left;
+
+  @media #{$large-and-up} {
+    width: 80%;
+  }
+
+  tr.table-headings {
+    th {
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 2px solid $nav-bar;
+    }
+  }
+
+  tr.post {
+    &:nth-child(odd) {
+      background-color: $nav-bar;
+    }
+
+    td {
+      padding: 10px 0 5px 10px;
+      border-right: 2px solid $nav-bar;
+
+      &:last-child {
+        border-right: 0px;
+      }
+    }
+
+    td.post-link {
+      text-align: center;
+      width: 120px;
+    }
+  }
+}
