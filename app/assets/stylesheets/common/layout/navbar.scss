@@ -12,6 +12,9 @@
   background-color: $nav-bar;
   z-index: 999;
 
+  @include flex(row, flex-end, center);
+  justify-content: space-between;
+
   @media #{$large-and-up} {
     width: calc(100% - 90px);
 
@@ -23,10 +26,8 @@
     padding-left: 20px;
     border-radius: 80px;
 
-    justify-content: space-between;
+    justify-content: flex-start;
   }
-
-  @include flex(row, flex-end, center);
 
   a {
     display: block;
@@ -40,12 +41,12 @@
     width: 200px;
     height: 80px;
     display: flex;
+    font-size: 30px;
 
     align-items: center;
-    justify-content: center;
-
 
     @media #{$large-and-up} {
+      justify-content: center;
       max-width: 160px;
     }
   }
