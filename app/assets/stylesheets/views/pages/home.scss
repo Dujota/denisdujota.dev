@@ -29,6 +29,7 @@
     #intro {
       height: 385px;
       @include flex(column, null, center);
+
       text-align: center;
       padding: 0px 50px 50px 50px;
 
@@ -37,10 +38,14 @@
         height: auto;
         padding-bottom: 70px;
         margin: 0;
+
+        max-width: 100%;
+        width: 100%;
+        height: 95vh;
       }
 
       @media #{$large-and-up} {
-        height: 571px;
+        text-align: left;
       }
 
       .intro-name {
@@ -65,33 +70,55 @@
           width: 480px;
           font-size: 60px;
         }
-      }
 
-      .subtitles {
-        @include subtitle-base;
-        margin-bottom: 10px;
+        @media #{$large-and-up} {
+          width: auto;
+          margin: 270px 0 0 -37vw;
+          padding: 4.2vw;
+          font-size: 4.2vw;
+          line-height: 1.4;
+          font-weight: 800;
+          border-radius: 264px;
+          z-index: 111;
 
-        @media #{$medium-and-up} {
-          margin-bottom: 30px;
-        }
-
-        .subtitle {
-          border-right: 1px solid $secondary;
-          padding-right: 5px;
-
-          &:last-child {
-            padding-right: 0px;
-            border-right: none;
+          span {
+            margin-right: 300px;
           }
         }
       }
 
-      .intro-text {
-        margin-top: 0px;
+      .intro-content {
+        .subtitles {
+          @include subtitle-base;
+          margin-bottom: 10px;
 
-        @media #{$medium-and-up} {
-          margin: 0 0 30px;
+          @media #{$medium-and-up} {
+            margin-bottom: 30px;
+            text-align: left;
+          }
+
+          .subtitle {
+            border-right: 1px solid $secondary;
+            padding-right: 5px;
+
+            &:last-child {
+              padding-right: 0px;
+              border-right: none;
+            }
+          }
         }
+
+        .intro-text {
+          margin-top: 0px;
+
+          @media #{$medium-and-up} {
+            margin: 0 0 30px;
+          }
+        }
+      }
+
+      .btn.btn-contact {
+        align-self: flex-start;
       }
     }
 
