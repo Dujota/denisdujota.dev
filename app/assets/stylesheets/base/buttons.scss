@@ -30,3 +30,16 @@
   width: 176px;
   min-height: 62px;
 }
+
+.btn-nav-menu {
+  padding: 20px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 64px;
+  height: 64px;
+  line-height: 62px;
+  display: none;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 64px;
+}

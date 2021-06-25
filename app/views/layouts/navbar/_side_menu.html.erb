@@ -1,5 +1,4 @@
-<nav class="navbar" id="large-navbar">
-  <%= link_to "Logo", root_path, class: 'nav-bar-logo'%>
+<div id="side-menu">
   <% if admin? %>
     <%= render partial: 'layouts/navbar/admin_navbar' %>
   <% else %>
@@ -9,4 +8,4 @@
       <%= render partial:'layouts/navbar/public_general_navbar' %>
     <% end %>
   <% end %>
-</nav>
+</div>
