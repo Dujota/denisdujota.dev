@@ -6,8 +6,8 @@ const mobileNav = document.getElementById('mobile-navbar');
 function mobileStyleChanges(width) {
   if (width.matches) {
     // If media query matches
-    mobileNav.style.display = 'flex';
     fullScreenNav.style.display = 'none';
+    mobileNav.style.display = 'flex';
     console.log('matches');
   } else {
     mobileNav.style.display = 'none';
