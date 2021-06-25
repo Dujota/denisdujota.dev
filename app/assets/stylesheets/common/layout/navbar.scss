@@ -1,5 +1,5 @@
 #large-nav-bar {
-  display: none;
+  visibility: hidden;
 }
 
 .navbar {
@@ -117,7 +117,7 @@
     }
   }
 
-  #side-menu {
+  #top-menu {
     width: 0px;
 
     ul {
@@ -135,9 +135,30 @@
       visibility: hidden;
       transition: opacity .35s;
 
+
       @media #{$medium-and-down} {
         overflow: hidden;
+        padding-top: 30px;
+        clear: both;
       }
+    }
+  }
+
+  .active {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+    left: 0;
+    right: 0;
+
+    #top-menu {
+      padding-top: 30px;
+      clear: both;
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
     }
   }
 }
