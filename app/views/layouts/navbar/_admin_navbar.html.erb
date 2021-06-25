@@ -1,0 +1,14 @@
+<ul class='nav-links admin-nav'>
+  <%# DEVISE LINKS %>
+  <%# Admin Dashboard Link %>
+  <li class='nav-link'> <%= link_to  "Dashboard", admin_root_path %></li>
+  <%# Regular user navigation %>
+  <li class='nav-link'>
+    <%= link_to "Posts", posts_path %>
+  </li>
+  <% if user_signed_in? %>
+    <li  class='nav-link'>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </li>
+  <% end %>
+</ul>

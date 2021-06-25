@@ -51,14 +51,25 @@
     }
   }
 
-  ul {
+  ul.nav-links {
     @include flex(row, flex-end, center);
+
+    @media #{$large-and-up} {
+      width: 100%;
+      height: 100%;
+
+      justify-content: flex-start;
+    }
 
     .nav-link {
       a {
+        text-transform: capitalize;
+
         @media #{$large-and-up} {
           margin-left: 25px;
         }
+
+
       }
     }
   }

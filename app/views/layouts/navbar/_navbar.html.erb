@@ -1,0 +1,12 @@
+<nav id="navbar">
+  <%= link_to "Logo", root_path, class: 'nav-bar-logo'%>
+  <% if admin? %>
+    <%= render partial: 'layouts/navbar/admin_navbar' %>
+  <% else %>
+    <% if params[:action] == 'home' %>
+      <%= render partial:'layouts/navbar/public_home_navbar' %>
+    <% else %>
+      <%= render partial:'layouts/navbar/public_general_navbar' %>
+    <% end %>
+  <% end %>
+</nav>
