@@ -45,42 +45,33 @@
 
 #mobile-navbar {
 
-  .btn-nav-menu {
-    order: 3;
+  #top-menu {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $nav-bar;
+    overflow-x: hidden;
+    transition: 0.5s;
 
-    .nav-menu-icon {
-      position: absolute;
-      top: 50%;
-      left: 25px;
-      right: 25px;
-      height: 2px;
-      background: $text-white;
-      margin-top: -1px;
-      line-height: 62px;
+    .btn-close {
+      margin: 20px;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 22px;
-      left: 20px;
-      right: 20px;
-      height: 2px;
+    .nav-links {
+      flex-direction: column;
 
-      background: $text-white;
-    }
+      position: relative;
+      top: 25%;
 
-    &::after {
-      content: '';
-      height: 2px;
+      width: 100%;
 
-      position: absolute;
-      top: auto;
-      left: 20px;
-      right: 20px;
-      bottom: 22px;
-
-      background: $text-white;
+      .nav-link {
+        font-size: 40px;
+        margin: 10px 0;
+      }
     }
   }
 }
