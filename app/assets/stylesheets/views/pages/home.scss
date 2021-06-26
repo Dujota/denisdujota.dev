@@ -138,8 +138,10 @@
     }
 
     #about {
-      .titles {
-        margin-top: 30px;
+      @media #{$large-and-up} {
+        .titles {
+          margin-top: 30px;
+        }
       }
 
       .contact-info {
