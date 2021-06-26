@@ -1,103 +1,121 @@
 <div id="home-page" class="container-home-page">
-  <%# Splash Screen %>
-  <section id="spash-picture"></section>
-  <%# Intro %>
-  <section class="section section-home-page" id="intro">
-    <h1 class="intro-name intro-title">
-      <span>
-        Denis
-      </span>
-      <br>
-      <span>
-        Dujota
-      </span>
-    </h1>
-    <div class="intro-content">
-      <div class="subtitles">
-        <span class="subtitle">Software Developer</span>
-        <span class="subtitle">Mentor</span>
-        <span class="subtitle">Consultant</span>
-        <span class="subtitle">Web Designer</span>
-      </div>
-      <p class="intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod ab iusto sint magni deleniti, harum esse corporis distinctio, officia odio necessitatibus sunt porro adipisci.</p>
-    </div>
-    <a href="#contact" class="btn btn-contact">Contact Me</a>
-    <%# Nav link anchorpoint %>
-    <span id="about-nav-anchor"></span>
-  </section>
-  <%# About Me %>
-  <section class="section section-home-page" id="about">
-    <div class="titles">
-      <div class="title">About Me</div>
-      <div class="subtitle">my story</div>
-    </div>
-    <div class="about-me-text">
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus ele</p>
-    </div>
-    <%= render('contact_info', display_name: false) %>
-    <%# Nav link anchorpoint %>
-    <span id="resume-nav-anchor"></span>
-  </section>
-  <%# Skills - programming %>
-  <section class="section section-home-page" id="skills">
-    <div class="titles">
-      <div class="title">Dev. Skills</div>
-      <div class="subtitle">programming with
-      </div>
-    </div>
-    <%= render('dev_skills') %>
-  </section>
-  <%# Experience %>
-  <section class="section section-home-page" id="experience">
-    <div class="titles">
-      <div class="title">Experience</div>
-      <div class="subtitle">what i have done</div>
-    </div>
-    <%# Resume lists %>
-    <%= render('experience') %>
-  </section>
-  <%# Spoken Languages %>
-  <section class="section section-home-page" id="languages">
-    <div class="titles">
-      <div class="title">Spoken Languages</div>
-      <div class="subtitle">reading and writing
-      </div>
-    </div>
-    <%= render('spoken_languages') %>
-  </section>
-  <%# Education %>
-  <section class="section section-home-page" id="education">
-    <div class="titles">
-      <div class="title">Education</div>
-      <div class="subtitle">Studied At
-      </div>
-    </div>
-    <%= render('education') %>
-    <%# Nav link anchorpoint %>
-    <span id="portfolio-nav-anchor"></span>
-  </section>
-  <%# Portfolio %>
-  <section class="section section-home-page" id="portfolio">
-    <div class="titles">
-      <div class="title">Portfolio</div>
-      <div class="subtitle">Latest Work
-      </div>
-    </div>
-    <%= render('portfolio') %>
-    <%# Nav link anchorpoint %>
-    <span id="contact-nav-anchor"></span>
-  </section>
-  <%# Contact %>
-  <section class="section section-home-page" id="contact">
-    <div class="titles">
-      <div class="title">Contact Me</div>
-      <div class="subtitle">Let's Talk
-      </div>
-    </div>
-    <%# render('contact_form')   TODO: ADD CONTACT FORM %>
-    <div class="card-round-outline">
-      <%= render'contact_info', display_name: true %>
-    </div>
-  </section>
+    <%# Splash Screen %>
+    <section id="spash-picture"></section>
+    <%# Intro %>
+    <section class="section section-home-page" id="intro">
+        <h1 class="intro-name intro-title">
+            <span>
+                Denis
+            </span>
+            <br>
+            <span>
+                Dujota
+            </span>
+        </h1>
+        <div class="intro-content">
+            <div class="subtitles">
+                <span class="subtitle">Software Developer</span>
+                <span class="subtitle">Mentor</span>
+                <span class="subtitle">Consultant</span>
+                <span class="subtitle">Web Designer</span>
+            </div>
+            <p class="intro-text">
+                Hey! I am a software developer from Toronto, Canada. Helping clients acheive award winning platforms in web, mobile and ecommerece space. Have a project? Would love to hear about it!
+            </p>
+
+        </div>
+        <a href="#contact" class="btn btn-contact">Contact Me</a>
+        <%# Nav link anchorpoint %>
+        <span id="about-nav-anchor"></span>
+    </section>
+    <%# About Me %>
+    <section class="section section-home-page" id="about">
+        <div class="titles">
+            <div class="title">About Me</div>
+            <div class="subtitle">my story</div>
+        </div>
+        <div class="about-me-text">
+            <p>
+                Some say I am an adventurer. The intrigue can take me to the far east for a bowl of the best Ramen on earth or pulling an all nighter of Neil deGrassy Tyson. It's that spark of curiosity that drives my passion for learning.
+            </p>
+            <p>
+                Nothing has captivated me more than the journey of being a softare developer. I want to bring that energy and drive to any project and add to its success in any way possible. It's that challenge that hooks me into every project I take on.
+            </p>
+
+            <p>
+                I have been working as a full stack developer in the health and safety sapce building award winning scalable e-commerce solutions. Metrics to drive conversion through good U/X backed by solid automated testing has been a key principle fore me.
+            </p>
+
+            <p>
+                I also teach others to code through immersive bootcamp programs that cover every facet of software engineering. Evolving over time along with the industry is one of the hidden gems of being a developer
+            </p>
+        </div>
+        <%= render('contact_info', display_name: false) %>
+        <%# Nav link anchorpoint %>
+        <span id="resume-nav-anchor"></span>
+    </section>
+    <%# Skills - programming %>
+    <section class="section section-home-page" id="skills">
+        <div class="titles">
+            <div class="title">Dev. Skills</div>
+            <div class="subtitle">programming with
+            </div>
+        </div>
+        <%= render('dev_skills') %>
+    </section>
+    <%# Experience %>
+    <section class="section section-home-page" id="experience">
+        <div class="titles">
+            <div class="title">Experience</div>
+            <div class="subtitle">what i have done</div>
+        </div>
+        <%# Resume lists %>
+        <%= render('experience') %>
+    </section>
+    <%# Spoken Languages %>
+    <section class="section section-home-page" id="languages">
+        <div class="titles">
+            <div class="title">Spoken Languages</div>
+            <div class="subtitle">reading and writing
+            </div>
+        </div>
+        <%= render('spoken_languages') %>
+    </section>
+    <%# Education %>
+    <section class="section section-home-page" id="education">
+        <div class="titles">
+            <div class="title">Education</div>
+            <div class="subtitle">Studied At
+            </div>
+        </div>
+        <p>
+            Having studied Full-Stack Web Development and UI/UX Design, understanding of both front and back end development gives me a different perspective of the project from both sides. It is this knowledge that drives me to develop a keen eye for design while still thinking critical of the project implementation.
+        </p>
+        <%= render('education') %>
+        <%# Nav link anchorpoint %>
+        <span id="portfolio-nav-anchor"></span>
+    </section>
+    <%# Portfolio %>
+    <section class="section section-home-page" id="portfolio">
+        <div class="titles">
+            <div class="title">Portfolio</div>
+            <div class="subtitle">Latest Work
+            </div>
+        </div>
+        <%= render('portfolio') %>
+        <%# Nav link anchorpoint %>
+        <span id="contact-nav-anchor"></span>
+    </section>
+    <%# Contact %>
+    <section class="section section-home-page" id="contact">
+        <div class="titles">
+            <div class="title">Contact Me</div>
+            <div class="subtitle">Let's Talk
+            </div>
+        </div>
+        <%# render('contact_form')   TODO: ADD CONTACT FORM %>
+        <div class="card-round-outline">
+            <%= render'contact_info', display_name: true %>
+        </div>
+    </section>
 </div>
