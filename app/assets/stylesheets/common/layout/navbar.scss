@@ -1,8 +1,7 @@
-#large-nav-bar {
-  visibility: hidden;
-}
-
 .navbar {
+  @include flex(row, flex-end, center);
+  justify-content: space-between;
+
   height: 80px;
   width: 100%;
   padding: 0 30px;
@@ -12,12 +11,79 @@
   right: 0;
   top: 0;
 
-
   background-color: $nav-bar;
   z-index: 999;
 
-  @include flex(row, flex-end, center);
-  justify-content: space-between;
+  transition: all .7s cubic-bezier(.165, .85, .45, 1);
+
+  a {
+    display: block;
+    margin: 0 5px;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+
+  .nav-bar-logo {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    font-size: 30px;
+
+    align-items: center;
+  }
+
+  ul.nav-links {
+    @include flex(row, flex-end, center);
+
+    .nav-link {
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+#mobile-navbar {
+  #top-menu {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $nav-bar;
+    overflow: hidden;
+
+    transition: all .7s cubic-bezier(.165, .85, .45, 1);
+
+    .top-menu-links {
+      @include flex(row, flex-end, center);
+      justify-content: space-between;
+      padding: 0 30px;
+
+      .btn-close {
+        right: 30px;
+      }
+    }
+
+    .nav-links {
+      flex-direction: column;
+
+      position: relative;
+      top: 15%;
+
+      width: 100%;
+
+      .nav-link {
+        font-size: 40px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+#large-navbar {
+  display: none;
 
   @media #{$large-and-up} {
     width: calc(100% - 90px);
@@ -33,22 +99,7 @@
     justify-content: flex-start;
   }
 
-  a {
-    display: block;
-    margin: 0 5px;
-    line-height: 1.2;
-    font-weight: 800;
-  }
-
-
   .nav-bar-logo {
-    width: 200px;
-    height: 80px;
-    display: flex;
-    font-size: 30px;
-
-    align-items: center;
-
     @media #{$large-and-up} {
       justify-content: center;
       max-width: 160px;
@@ -56,7 +107,6 @@
   }
 
   ul.nav-links {
-    @include flex(row, flex-end, center);
 
     @media #{$large-and-up} {
       width: 100%;
@@ -67,98 +117,10 @@
 
     .nav-link {
       a {
-        text-transform: capitalize;
-
         @media #{$large-and-up} {
           margin-left: 25px;
         }
-
-
       }
-    }
-  }
-
-  .btn-nav-menu {
-    order: 3;
-
-    .nav-menu-icon {
-      position: absolute;
-      top: 50%;
-      left: 25px;
-      right: 25px;
-      height: 2px;
-      background: $text-white;
-      margin-top: -1px;
-      line-height: 62px;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 22px;
-      left: 20px;
-      right: 20px;
-      height: 2px;
-
-      background: $text-white;
-    }
-
-    &::after {
-      content: '';
-      height: 2px;
-
-      position: absolute;
-      top: auto;
-      left: 20px;
-      right: 20px;
-      bottom: 22px;
-
-      background: $text-white;
-    }
-  }
-
-  #top-menu {
-    width: 0px;
-
-    ul {
-      position: relative;
-      top: 0;
-      left: 0;
-      margin-top: 0;
-      margin-left: 0;
-      margin-right: 0;
-      float: none;
-      width: auto;
-      height: 0;
-      text-align: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .35s;
-
-
-      @media #{$medium-and-down} {
-        overflow: hidden;
-        padding-top: 30px;
-        clear: both;
-      }
-    }
-  }
-
-  .active {
-    overflow-y: scroll;
-    height: 100%;
-    width: 100%;
-    padding: 0 30px;
-    left: 0;
-    right: 0;
-
-    #top-menu {
-      padding-top: 30px;
-      clear: both;
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-      overflow: hidden;
     }
   }
 }
