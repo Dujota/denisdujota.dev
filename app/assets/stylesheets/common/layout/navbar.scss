@@ -52,18 +52,25 @@
     top: 0;
     left: 0;
     background-color: $nav-bar;
-    overflow-x: hidden;
-    transition: 0.5s;
+    overflow: hidden;
 
-    .btn-close {
-      margin: 20px;
+    transition: all .7s cubic-bezier(.165, .85, .45, 1);
+
+    .top-menu-links {
+      @include flex(row, flex-end, center);
+      justify-content: space-between;
+      padding: 0 30px;
+
+      .btn-close {
+        right: 30px;
+      }
     }
 
     .nav-links {
       flex-direction: column;
 
       position: relative;
-      top: 25%;
+      top: 15%;
 
       width: 100%;
 
