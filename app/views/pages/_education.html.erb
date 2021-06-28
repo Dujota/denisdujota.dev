@@ -1,22 +1,13 @@
-<%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
-<% education = [
-    { date:'2018', name:"Bitmaker Labs - General Assembly", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque."},
-
-    { date:'2017', name:"Bitmaker Labs - General Assembly", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque."},
-    { date:'2008', name:"ADR Institure of Ontario", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque."},
-    { date:'2006', name:"Humber College", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque."},
-  ] %>
-<%# Resume Items %>
-<div id="education-items">
-    <% education.each do |job| %>
-    <div class="list-item">
-        <div class="item-header">
-            <div class="item-date"><span><%= job[:date] %></span></div>
-            <div class="item-name"><span><%= job[:name] %></span></div>
+<section class="section section-home-page" id="education">
+        <div class="titles">
+            <div class="title">Education</div>
+            <div class="subtitle">Studied At
+            </div>
         </div>
-        <div class="item-text">
-            <p><%= job[:text] %></p>
-        </div>
-    </div>
-    <% end %>
-</div>
+        <p>
+            Having studied Full-Stack Web Development and UI/UX Design, understanding of both front and back end development gives me a different perspective of the project from both sides. It is this knowledge that drives me to develop a keen eye for design while still thinking critical of the project implementation.
+        </p>
+        <%= render('education_content') %>
+        <%# Nav link anchorpoint %>
+        <span id="portfolio-nav-anchor"></span>
+    </section>
