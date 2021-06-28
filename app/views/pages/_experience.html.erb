@@ -1,8 +1,8 @@
 <%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
 <% resume = [
-    {date:'Present', name:"General Assembly", text:"As lead instructor for Software Engineering Immersive Flex program, I Adapt a global curriculum and manage a team of Teaching Assistants. Act as a better leader, mentor to inspire and supports strudents"},
+     {date:'Present', name:"International Safety Systems", text:'As senior full stack developer I design features and UI for their custom built E-Commerce, ERP and API platform. I also manage a remote team of engineers while still takin a hands on approach to develop powerful, maintainable, scalable web and native applications.'},
 
-    {date:'Present', name:"International Safety Systems", text:'As senior full stack developer I design features and UI for their custom built E-Commerce, ERP and API platform. I am also manage a remote software team while developing a powerful, maintainable, scalable web and Native applications.'},
+    {date:'Present', name:"General Assembly", text:"As lead instructor for Software Engineering Immersive Flex program, I Adapt a global curriculum and manage a team of Teaching Assistants. Act as a better leader, mentor to inspire and supports strudents"},
 
     {date:'2018-2019', name:'University of Toronto, SCS', text:'Teaching, assisting, and grading a diverse class of students at UoT SCS Web Development Bootcamp. Maintain and update curriculum based on industry changes.'},
 
@@ -10,18 +10,17 @@
 
     {date:'2012-2017', name:'Automotive Resources International', text:'In the accounting and supply chain management space, I was tasked with finding efficiencies in processes through big data driven research.'},
   ] %>
-
 <%# Resume Items %>
 <div id="resume-items">
-    <% resume.each do |job| %>
+  <% resume.each do |job| %>
     <div class="list-item">
-        <div class="item-header">
-            <div class="item-date"><span><%= job[:date] %></span></div>
-            <div class="item-name"><span><%= job[:name] %></span></div>
-        </div>
-        <div class="item-text">
-            <p><%= job[:text] %></p>
-        </div>
+      <div class="item-header">
+        <div class="item-date"><span><%= job[:date] %></span></div>
+        <div class="item-name"><span><%= job[:name] %></span></div>
+      </div>
+      <div class="item-text">
+        <p><%= job[:text] %></p>
+      </div>
     </div>
-    <% end %>
+  <% end %>
 </div>
