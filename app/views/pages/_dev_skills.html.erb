@@ -6,18 +6,18 @@
     { name:"API Design (REST/GraphQL)", text:"Building scalable internal/external APIs in ruby, javascript or python"},
     { name:"Automated testing", text:"CircleCi, TravisCi, Rspec, MiniTest, Jest, Enzyme, React Testing Library"},
     { name:"Object Oriented Design", text:"Design and develop software system that are easy to maintain and extend over time"},
-    { name:"Cloud Services", text:"AWS, Google Cloud, Heroku, Oauth, SaaS integrations Azure"},
+    { name:"Cloud Services", text:"AWS, Google Cloud, Heroku, Oauth, SaaS integrations, Azure"},
     { name:"Python, Django", text:"Building scalape application on web and internal with python/Django"},
     { name:"HTML, CSS", text:"Work daily with Sass, server rendered templates, client side rendered html"},
   ] %>
 <%# Dev Skills Items %>
 <div id="dev-skill-items">
-    <% dev_skills.each do |skill| %>
+  <% dev_skills.each do |skill| %>
     <div class="list-item">
-        <div class="item-name"><span><%= skill[:name] %></span></div>
-        <div class="item-text">
-            <p><%= skill[:text] %></p>
-        </div>
+      <div class="item-name"><span><%= skill[:name] %></span></div>
+      <div class="item-text">
+        <p><%= skill[:text] %></p>
+      </div>
     </div>
-    <% end %>
+  <% end %>
 </div>
