@@ -25,11 +25,11 @@
 
       .item-image {
         width: 100%;
-        height: 425px;
-        background-color: tan;
+        height: 290px;
+
 
         @media #{$medium-and-up} {
-          height: auto;
+          height: 250px;
 
           // force the even box shape
           &::after {
