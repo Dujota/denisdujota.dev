@@ -1,6 +1,6 @@
 <div id="top-menu">
   <div class="top-menu-links">
-    <%= link_to "Logo", root_path, class: 'nav-bar-logo'%>
+    <%= render partial: 'layouts/navbar/logo' %>
     <a href="#" class="btn-close btn"><span></span></a>
   </div>
   <% if admin? %>
