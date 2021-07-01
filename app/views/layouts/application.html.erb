@@ -9,7 +9,6 @@
     <% if enable_logrocket? %>
       <%= javascript_packs_with_chunks_tag 'logrocket', "application", 'data-turbolinks-track': "reload"  %>
     <% else %>
-    <%= puts 'hi there!!!!' %>
       <%= javascript_packs_with_chunks_tag  "application", 'data-turbolinks-track': "reload"  %>
     <% end %>
 
