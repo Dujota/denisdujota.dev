@@ -6,8 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
-    <% if  %>
-
+    <% if enable_logrocket? %>
       <%= javascript_packs_with_chunks_tag 'logrocket', "application", 'data-turbolinks-track': "reload"  %>
     <% else %>
     <%= puts 'hi there!!!!' %>
