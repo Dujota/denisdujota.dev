@@ -27,7 +27,7 @@
           </strong>
           <span>
             <% if contact == 'linkedIn' || contact == 'gitHub' %>
-              <a href="<%= value.capitalize() %>"> <%=contact.capitalize()%> Logo DenisDujota</a>
+              <a href="<%= value.capitalize() %>"> <i class="fab fa-<%= contact.downcase() %>"></i> profile</a>
             </span>
           <% else %>
             <%= value.capitalize() %>
