@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Pages
   root "pages#home"
-  get "contact", to: "pages#contact"
+  # get "contact", to: "pages#contact"
 
   # Admin Routes
   devise_for :users, path: "admin",
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   # Blog Posts
   resources :posts, only: %i[index show]
 
-  resources :inqury, only: %i[create]
+  resources :inquiries, only: %i[create]
 end

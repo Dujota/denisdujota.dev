@@ -1,7 +1,10 @@
 class InquiriesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   load_and_authorize_resource
 
   def create
+    binding.pry
+
     respond_to do |format|
       if @inquiry.save
         CustomerMailer.with(inquiry: @inquiry).inquiry_submitted.deliver_now
