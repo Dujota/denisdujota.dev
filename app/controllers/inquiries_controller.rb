@@ -3,8 +3,6 @@ class InquiriesController < ApplicationController
   load_and_authorize_resource
 
   def create
-    binding.pry
-
     respond_to do |format|
       if @inquiry.save
         CustomerMailer.with(inquiry: @inquiry).inquiry_submitted.deliver_now
@@ -19,6 +17,7 @@ class InquiriesController < ApplicationController
   private
 
   def inquiry_params
-    params.require(:inquiry).permit(:name, :message, :email)
+    # params.require(:inquiry).permit(:name, :message, :email)
+    params.permit(:name, :message, :email)
   end
 end
