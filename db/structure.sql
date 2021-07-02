@@ -26,6 +26,40 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
+-- Name: inquiries; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.inquiries (
+    id bigint NOT NULL,
+    name character varying,
+    email character varying,
+    message text,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    phone_number character varying
+);
+
+
+--
+-- Name: inquiries_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.inquiries_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: inquiries_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.inquiries_id_seq OWNED BY public.inquiries.id;
+
+
+--
 -- Name: posts; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -145,6 +179,13 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- Name: inquiries id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.inquiries ALTER COLUMN id SET DEFAULT nextval('public.inquiries_id_seq'::regclass);
+
+
+--
 -- Name: posts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -171,6 +212,14 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 ALTER TABLE ONLY public.ar_internal_metadata
     ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
+-- Name: inquiries inquiries_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.inquiries
+    ADD CONSTRAINT inquiries_pkey PRIMARY KEY (id);
 
 
 --
@@ -259,6 +308,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210608182327'),
 ('20210608182604'),
 ('20210608193236'),
-('20210608213657');
+('20210608213657'),
+('20210702040941'),
+('20210702044931');
 
 
