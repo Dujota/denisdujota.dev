@@ -35,7 +35,8 @@ CREATE TABLE public.inquiries (
     email character varying,
     message text,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    phone_number character varying
 );
 
 
@@ -308,6 +309,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210608182604'),
 ('20210608193236'),
 ('20210608213657'),
-('20210702040941');
+('20210702040941'),
+('20210702044931');
 
 
