@@ -49,7 +49,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem "dotenv-rails", groups: [:development, :test]
 
 # Test
 gem "rspec-rails", "~> 5.0", :groups => [:development, :test]
@@ -58,6 +58,9 @@ gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
 gem "rufo", "~> 0.13.0", :groups => [:development, :test]
 # Debugging
 gem "pry", "~> 0.14.1", :groups => [:development, :test]
+
+# Dev Mailer
+gem "letter_opener", group: :development
 
 # Auth
 gem "devise", "~> 4.8"

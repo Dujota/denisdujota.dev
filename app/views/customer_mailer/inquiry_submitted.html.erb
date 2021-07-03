@@ -1,0 +1,13 @@
+<div style="font-family:'Arial', sans-serif;">
+  <p>Hey <%= @inquiry.name %>!</p>
+  <p>
+    Thanks reaching out! Wanted to let you know, I got your email and it is in my inbox.<br>
+    I usually respond to inquiries within one business day.
+  </p>
+
+  <hr>
+  Original message received:
+
+  <%= sanitize @inquiry.message %>
+  <%= render "message_footer" %>
+</div>

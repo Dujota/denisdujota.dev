@@ -12,6 +12,7 @@ class Ability
       can :manage, :all
     else
       can %i(index show), Post
+      can %i(create), Inquiry
     end
 
     #

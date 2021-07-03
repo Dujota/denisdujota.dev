@@ -103,7 +103,11 @@
             <div class="subtitle">Let's Talk
             </div>
         </div>
-        <%# render('contact_form')   TODO: ADD CONTACT FORM %>
+
+        <%# Contact Form %>
+        <%= render 'contact_form' %>
+
+        <%# Contact Info %>
         <div class="card-round-outline">
             <%= render'contact_info', display_name: true %>
         </div>
