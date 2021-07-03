@@ -4,6 +4,6 @@ class AdminMailer < ApplicationMailer
   def customer_inquiry
     @inquiry = params[:inquiry]
     @email = @inquiry.email.downcase.strip
-    mail to: @email, subject: "**INQUIRY** from #{@email}"
+    mail to: "denisdujota@gmail.com", subject: "**INQUIRY** from #{@email}"
   end
 end
