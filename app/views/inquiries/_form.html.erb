@@ -14,7 +14,7 @@
       Full Name <strong>*</strong>
     <% end %>
     <p class="field">
-      <%= f.text_field :name, label: "Full Name" %>
+      <%= f.text_field :name, label: "Full Name", placeholder: "eg: Denis S. Dujota" %>
     </p>
   </fieldset>
   <fieldset>
@@ -22,7 +22,7 @@
       Email <strong>*</strong>
     <% end %>
     <p class="field">
-      <%= f.email_field :email, label: "Email" %>
+      <%= f.email_field :email, label: "Email", placeholder: "example@domain.com" %>
     </p>
   </fieldset>
   <fieldset>
@@ -30,10 +30,12 @@
       Message <strong>*</strong>
     <% end %>
     <p class="field">
-      <%= f.text_area :message, label: "Message" %>
+      <%= f.text_area :message, label: "Message", placeholder: "Write to me here." %>
     </p>
   </fieldset>
-  <p class="field">
-    <%= f.submit "Send Message", class: 'btn btn-primary btn-submit'%>
-  </p>
+  <fieldset>
+    <p class="field">
+      <%= f.submit "Send Message", class: 'btn btn-primary btn-submit'%>
+    </p>
+  </fieldset>
 <% end %>

@@ -4,18 +4,21 @@
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &:-moz-placeholder {
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &::-webkit-input-placeholder {
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &:-ms-input-placeholder {
@@ -24,8 +27,6 @@
     text-align: $alignment;
   }
 }
-
-
 
 .resource-form {
   @include flex(column, center, center);
@@ -44,7 +45,7 @@
       top: -5px;
       font-size: 12px;
       line-height: 12px;
-      color: #fff;
+      color: $text-white;
       font-weight: 800;
       background: $primary;
       text-transform: uppercase;
@@ -56,7 +57,6 @@
     }
 
     .field {
-
       margin: 0;
 
       input[type="text"],
@@ -70,9 +70,9 @@
         height: 64px;
         width: 100%;
 
+        color: $text-white;
         font-size: 14px;
-        appearance: none;
-        outline: 0;
+
         background: 0 0 !important;
         resize: none;
 
@@ -88,6 +88,10 @@
         padding-top: 30px;
         padding-bottom: 30px;
         resize: none;
+      }
+
+      .btn-submit {
+        width: 100%;
       }
     }
   }
