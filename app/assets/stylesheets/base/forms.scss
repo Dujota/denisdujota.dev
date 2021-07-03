@@ -4,18 +4,21 @@
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &:-moz-placeholder {
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &::-webkit-input-placeholder {
     color: $color;
     font-weight: $weight;
     text-align: $alignment;
+    opacity: 1;
   }
 
   &:-ms-input-placeholder {
@@ -25,26 +28,71 @@
   }
 }
 
-.form-section {}
-
 .resource-form {
-  .section-header {}
+  @include flex(column, center, center);
 
-  label {}
+  width: 100%;
 
-  .sub-label {}
-}
+  fieldset {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
 
-.field-group {
+    label {
+      padding: 0 10px;
+      position: absolute;
+      left: 35px;
+      top: -5px;
+      font-size: 12px;
+      line-height: 12px;
+      color: $text-white;
+      font-weight: 800;
+      background: $primary;
+      text-transform: uppercase;
+      z-index: 2;
 
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="number"],
-  input[type="datetime-local"],
-  textarea {}
-}
+      strong {
+        color: $secondary;
+      }
+    }
 
-.uppercase-field {
-  text-transform: uppercase;
+    .field {
+      margin: 0;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="number"],
+      input[type="datetime-local"],
+      textarea {
+        display: block;
+
+        height: 64px;
+        width: 100%;
+
+        color: $text-white;
+        font-size: 14px;
+
+        background: 0 0 !important;
+        resize: none;
+
+        border: 1px solid $nav-bar;
+        border-radius: 30px;
+        padding: 0 30px;
+
+        transition: all .3s ease 0s;
+      }
+
+      textarea {
+        height: 170px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        resize: none;
+      }
+
+      .btn-submit {
+        width: 100%;
+      }
+    }
+  }
 }
