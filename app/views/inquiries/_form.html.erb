@@ -26,6 +26,14 @@
     </p>
   </fieldset>
   <fieldset>
+    <%= f.label :phone_number do %>
+      Phone
+    <% end %>
+    <p class="field">
+      <%= f.telephone_field :phone_number, label: "Email", placeholder: "Optional" %>
+    </p>
+  </fieldset>
+  <fieldset>
     <%= f.label :message do %>
       Message <strong>*</strong>
     <% end %>
