@@ -2,6 +2,10 @@
 
 Name:<%= @inquiry.name %>
 
+<% if @inquiry.phone_number.present? %>
+Phone Number: <%= @inquiry.phone_number %>
+<% end %>
+
 Email: <%= @inquiry.email %>
 
 Message:
