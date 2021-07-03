@@ -6,6 +6,7 @@ class InquiriesController < ApplicationController
     respond_to do |format|
       if @inquiry.save
         CustomerMailer.with(inquiry: @inquiry).inquiry_submitted.deliver_now
+        AdminMailer.with(inquiry: @inquiry).customer_inquiry.deliver_now
 
         format.html { redirect_to root_path, notice: "Message sent. Thanks for reaching out! " }
       else

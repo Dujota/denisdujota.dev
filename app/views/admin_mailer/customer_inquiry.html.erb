@@ -1,0 +1,18 @@
+<div style="font-family:'Arial', sans-serif;">
+    <h2>Inquiry:</h2>
+
+    <p>
+        <strong>Full Name:</strong><%= @inquiry.name %>
+    </p>
+    <p>
+        <strong>Email:</strong><%= @inquiry.email %>
+    </p>
+
+    <strong>Message:</strong>
+    <hr>
+    <p>
+        <%= sanitize @inquiry.message %>
+    </p>
+
+    <hr>
+</div>
