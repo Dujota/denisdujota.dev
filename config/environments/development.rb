@@ -82,4 +82,11 @@ Rails.application.configure do
 
   # NGROK
   config.hosts << ENV["NGROK"] if ENV["NGROK"]
+
+  # Mailer Configuration
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
+
+  # Default Mailer
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
 end

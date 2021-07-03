@@ -1,0 +1,41 @@
+<%# Errors %>
+<% if @inquiry.try(:errors).try(:any?) %>
+  <h2>The following errors prevented the post from saving:</h2>
+  <ul>
+    <% @inquiry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%# Contact Form %>
+<%= form_with model: @inquiry, url: inquiries_path, class: "resource-form" do |f| %>
+  <fieldset>
+    <%= f.label :name do %>
+      Full Name <strong>*</strong>
+    <% end %>
+    <p class="field">
+      <%= f.text_field :name, label: "Full Name", placeholder: "eg: Denis S. Dujota" %>
+    </p>
+  </fieldset>
+  <fieldset>
+    <%= f.label :email do %>
+      Email <strong>*</strong>
+    <% end %>
+    <p class="field">
+      <%= f.email_field :email, label: "Email", placeholder: "example@domain.com" %>
+    </p>
+  </fieldset>
+  <fieldset>
+    <%= f.label :message do %>
+      Message <strong>*</strong>
+    <% end %>
+    <p class="field">
+      <%= f.text_area :message, label: "Message", placeholder: "Write to me here." %>
+    </p>
+  </fieldset>
+  <fieldset>
+    <p class="field">
+      <%= f.submit "Send Message", class: 'btn btn-primary btn-submit'%>
+    </p>
+  </fieldset>
+<% end %>
