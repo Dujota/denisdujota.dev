@@ -20,7 +20,11 @@
 
   @include flex(row, center, center);
 
+  // Animation
+  transition: 1s all cubic-bezier(.165, .85, .45, 1) 0s;
+
   &:hover {
+
     color: $secondary;
     border: 1px solid $secondary;
   }
