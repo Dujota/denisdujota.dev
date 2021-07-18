@@ -28,7 +28,8 @@
   }
 }
 
-.resource-form {
+.resource-form,
+form {
   @include flex(column, center, center);
 
   width: 100%;
@@ -77,7 +78,7 @@
         background: 0 0 !important;
         resize: none;
 
-        border: 1px solid $nav-bar;
+        border: 1px solid $nav-bar !important;
         border-radius: 30px;
         padding: 0 30px;
 
