@@ -17,16 +17,19 @@ $extra-small-screen-up: 361px !default;
 $small-screen-up: 721px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1281px !default;
+$wide-screen-up: 1901px !default;
 
 $extra-small-screen-down: 360px !default;
 $small-screen-down: 720px !default;
 $medium-screen-down: 992px !default;
 $large-screen-down: 1280px !default;
+$wide-screen-down: 1900px !default;
 
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
 $fullscreen-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$widescreen-and-up: "only screen and (min-width : #{$wide-screen-up})" !default;
 
 $small-and-down: "only screen and (max-width : #{$small-screen-down})" !default;
 $extra-small-and-down: "only screen and (max-width : #{$extra-small-screen-down})" !default;

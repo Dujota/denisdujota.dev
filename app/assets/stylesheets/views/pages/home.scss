@@ -59,6 +59,10 @@
         margin-left: 30%;
       }
 
+      @media #{$widescreen-and-up} {
+        height: auto;
+      }
+
       .intro-name {
         @include section-header-text;
         font-size: 40px;
