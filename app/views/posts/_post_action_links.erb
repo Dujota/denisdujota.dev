@@ -1,0 +1,5 @@
+ <% if admin? %>
+  <div class="action-links">
+    <%= link_to "Create new Blog Post", new_admin_post_path, class: "btn" %>
+  </div>
+<% end %>
