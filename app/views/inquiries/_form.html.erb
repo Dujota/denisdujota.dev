@@ -9,6 +9,8 @@
 <% end %>
 <%# Contact Form %>
 <%= form_with model: @inquiry, url: inquiries_path, class: "resource-form" do |f| %>
+  <%= invisible_captcha %>
+
   <fieldset>
     <%= f.label :name do %>
       Full Name <strong>*</strong>

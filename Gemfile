@@ -65,3 +65,6 @@ gem "letter_opener", group: :development
 # Auth
 gem "devise", "~> 4.8"
 gem "cancancan", "~> 3.2"
+
+# Anti Spam
+gem 'invisible_captcha'

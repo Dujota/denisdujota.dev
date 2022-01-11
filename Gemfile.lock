@@ -98,6 +98,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    invisible_captcha (2.0.0)
+      rails (>= 5.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -270,6 +272,7 @@ DEPENDENCIES
   devise (~> 4.8)
   dotenv-rails
   factory_bot_rails (~> 6.2)
+  invisible_captcha
   jbuilder (~> 2.7)
   letter_opener
   listen (~> 3.3)
