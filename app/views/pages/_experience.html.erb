@@ -1,8 +1,10 @@
 <%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
 <% resume = [
-     {date:'Present', name:"International Safety Systems", text:'As senior full stack developer I design features and UI for their custom built E-Commerce, ERP and API platform. I also manage a remote team of engineers while still takin a hands on approach to develop powerful, maintainable, scalable web and native applications.'},
+    {date:'Present', name:"Bond Brand Loyalty", text:'As a senior software engineer, I oversee and implement loyalty reward platforms for globally iconic brands and global businesses. Focused on best practices for today\'s leading technology stacks coupled with lean agile practices, I drive effeciency and bring costs down. '},
 
     {date:'Present', name:"General Assembly", text:"As lead instructor for Software Engineering Immersive Flex program, I adapt a global curriculum and manage a team of Teaching Assistants. Act as a better leader, mentor to inspire and support strudents"},
+
+    {date:'2018-2021', name:"International Safety Systems", text:'As senior full stack developer I design features and UI for their custom built E-Commerce, ERP and API platform. I also manage a remote team of engineers while still takin a hands on approach to develop powerful, maintainable, scalable web and native applications.'},
 
     {date:'2018-2019', name:'University of Toronto, SCS', text:'Teaching, assisting, and grading a diverse class of students at UoT SCS Web Development Bootcamp. Maintain and update curriculum based on industry changes.'},
 
@@ -10,6 +12,8 @@
 
     {date:'2012-2017', name:'Automotive Resources International', text:'In the accounting and supply chain management space, I was tasked with finding efficiencies in processes through big data driven research.'},
   ] %>
+
+
 <%# Resume Items %>
 <div id="resume-items">
   <% resume.each do |job| %>
@@ -20,7 +24,7 @@
       </div>
       <div class="item-text">
         <p><%= job[:text] %></p>
-      </div>
+           </div>
     </div>
   <% end %>
 </div>

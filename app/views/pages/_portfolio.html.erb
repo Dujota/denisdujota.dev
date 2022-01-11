@@ -1,23 +1,29 @@
 <%# TODO: REFACTOR THIS TO A BACKEND QUERY %>
-<% portfolio = [
-    { name:"International Safety Systems", category:"Link", path:"https://www.internationalsafety.com",image:"bird_640.jpg"},
-    { name:"Spire-Ruby", category:"Link", path:"https://github.com/bitesite/spire-ruby", image:"deer_640.jpg"},
-    { name:"MusicForever (DJ. Ollggie)", category:"Link", path:"https://www.musicforever.bz/", image:"rabbit_640.jpg"},
-    { name:"Neighbourly", category:"Link", path:"https://github.com/Dujota/neighborly", image:"cat_640.png"},
-    { name:"Aeya Studios", category:"Link", path:"http://www.aeya.ca/", image:"iguana_640.jpg"},
-    { name:"WatsPoppin", category:"Link", path:"https://github.com/Dujota/watspoppin", image:"parrot_640.jpg"},
-  ] %>
-<%# Portfolio %>
-<div id="portfolio-items">
-  <% portfolio.each do |proj| %>
-    <div class="list-item">
-      <%# portfolio link %>
-      <a class="portfolio-link" href="<%= proj[:path]%>" target="_blank" rel="noopener noreferrer">
-        <%# <div class=""> %>
-        <%= image_tag proj[:image], class:"item-image" %>
-        <div class="item-category"><%= proj[:category] %> </div>
-        <div class="item-name"><span><%= proj[:name] %></span></div>
-      </a>
-    </div>
-  <% end %>
-</div>
+  <% portfolio=[ { name:"Scotiabank Scene Plus", category:"Link",
+    path:"https://www.sceneplus.ca/",image:"puppy_640.jpg"}, { name:"International Safety Systems", category:"Link",
+    path:"https://www.internationalsafety.com",image:"bird_640.jpg"}, { name:"Spire-Ruby", category:"Link",
+    path:"https://github.com/bitesite/spire-ruby", image:"deer_640.jpg"}, { name:"MusicForever (DJ. Ollggie)",
+    category:"Link", path:"https://www.musicforever.bz/", image:"rabbit_640.jpg"}, { name:"Aeya Studios",
+    category:"Link", path:"http://www.aeya.ca/", image:"iguana_640.jpg"}, { name:"Neighbourly", category:"Link",
+    path:"https://github.com/Dujota/neighborly", image:"cat_640.png"}, { name:"WatsPoppin", category:"Link",
+    path:"https://github.com/Dujota/watspoppin", image:"parrot_640.jpg"}, ] %>
+
+
+    <%# Portfolio %>
+      <div id="portfolio-items">
+        <% portfolio.each do |proj| %>
+          <div class="list-item">
+            <%# portfolio link %>
+              <a class="portfolio-link" href="<%= proj[:path]%>" target="_blank" rel="noopener noreferrer">
+                <%# <div class=""> %>
+                  <%= image_tag proj[:image], class:"item-image" %>
+                    <div class="item-category">
+                      <%= proj[:category] %>
+                    </div>
+                    <div class="item-name"><span>
+                        <%= proj[:name] %>
+                      </span></div>
+              </a>
+          </div>
+          <% end %>
+      </div>
