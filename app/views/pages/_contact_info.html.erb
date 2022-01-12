@@ -26,9 +26,11 @@
             <span class="subtitle"><%= contact.capitalize() %>:</span>
           </strong>
           <span>
-            <% if contact == 'linkedIn' || contact == 'gitHub' %>
+          <% if contact == 'linkedIn' || contact == 'gitHub' %>
               <a href="<%= value.capitalize() %>"> <i class="fab fa-<%= contact.downcase() %>"></i> profile</a>
             </span>
+          <% elsif contact == "address" %>
+            <%= value %>
           <% else %>
             <%= value.capitalize() %>
           </span>
