@@ -67,4 +67,7 @@ gem "devise", "~> 4.8"
 gem "cancancan", "~> 3.2"
 
 # Anti Spam
-gem 'invisible_captcha'
+gem "invisible_captcha"
+gem "net-smtp" # to send email
+gem "net-imap" # for rspec
+gem "net-pop"  # for rspec
