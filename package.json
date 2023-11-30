@@ -4,8 +4,8 @@
   "dependencies": {
     "@babel/preset-react": "^7.13.13",
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
+    "@rails/actioncable": "^7.1.2",
+    "@rails/activestorage": "^7.1.2",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
